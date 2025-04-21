@@ -25,7 +25,7 @@ const BirthdayCelebration = ({ name, onBack }: CelebrationProps) => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9')] bg-cover bg-center relative overflow-hidden">
-      <audio ref={audioRef} src="src/assets/happy-birthday-314197.mp3" loop />
+      <audio ref={audioRef} src="assets/happy-birthday-314197.mp3" loop />
       <button 
       onClick={onBack} 
       className="absolute top-6 left-6 bg-white/30 hover:bg-white/50 p-3 rounded-full transition-colors backdrop-blur-sm z-20"

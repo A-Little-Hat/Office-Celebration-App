@@ -25,7 +25,7 @@ const PromotionCelebration = ({ name, onBack }: CelebrationProps) => {
   }, []);
   return (
     <div className="min-h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1500673922987-e212871fec22')] bg-cover bg-center relative overflow-hidden">
-      <audio ref={audioRef} src="src/assets/good-time_outro-326224.mp3" loop />
+      <audio ref={audioRef} src="assets/good-time_outro-326224.mp3" loop />
       <button 
         onClick={onBack} 
         className="absolute top-6 left-6 bg-white/30 hover:bg-white/50 p-3 rounded-full transition-colors backdrop-blur-sm z-20"

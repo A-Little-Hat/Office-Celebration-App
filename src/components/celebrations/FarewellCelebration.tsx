@@ -34,7 +34,7 @@ const FarewellCelebration = ({ name, onBack }: CelebrationProps) => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07')] bg-cover bg-center relative overflow-hidden">
-      <audio ref={audioRef} src="src/assets/motivate-corporate-116698.mp3" loop />
+      <audio ref={audioRef} src="assets/motivate-corporate-116698.mp3" loop />
       <button 
         onClick={onBack} 
         className="absolute top-6 left-6 bg-white/30 hover:bg-white/50 p-3 rounded-full transition-colors backdrop-blur-sm z-20"
