@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Fireworks from '@/components/effects/Fireworks';
 import { ChevronLeft } from 'lucide-react';
 
@@ -9,8 +9,23 @@ interface CelebrationProps {
 }
 
 const PromotionCelebration = ({ name, onBack }: CelebrationProps) => {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.play().catch((err) => console.error('Failed to play audio:', err));
+    }
+    return () => {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    };
+  }, []);
   return (
     <div className="min-h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1500673922987-e212871fec22')] bg-cover bg-center relative overflow-hidden">
+      <audio ref={audioRef} src="src/assets/good-time_outro-326224.mp3" loop />
       <button 
         onClick={onBack} 
         className="absolute top-6 left-6 bg-white/30 hover:bg-white/50 p-3 rounded-full transition-colors backdrop-blur-sm z-20"
